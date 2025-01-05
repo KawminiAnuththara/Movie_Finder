@@ -9,13 +9,13 @@ export const dark = {
     grey:'#bebebe',
 
     fontxs :'0.75em',
-    fontxs :'0.875em',
-    fontxs :'1em',
-    fontxs :'1.25em',
-    fontxs :'2em',
-    fontxs :'3em',
-    fontxs :'5em',
-    fontxs :'10em',
+    fontsm :'0.875em',
+    fontmd :'1em',
+    fontlg :'1.25em',
+    fontxl :'2em',
+    fontxxl :'3em',
+    fontxxxl :'5em',
+    fontBig :'10em',
 
     navHeight:'5rem'
 
