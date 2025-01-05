@@ -20,6 +20,8 @@ function App() {
         options={
           {
             smooth:true,
+            multiplier: 1, // Adjust scrolling speed
+            class: 'is-inview',
           }
         }
         watch={

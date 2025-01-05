@@ -7,5 +7,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+[data-scroll-container] {
+  overflow: hidden;
+}
+
+[data-scroll] {
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
 
 
