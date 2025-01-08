@@ -108,7 +108,7 @@ const Cover = () => {
 
   return (
     <div data-scroll-container ref={scrollRef}>
-      <VideoContainer data-scroll-section>
+      <VideoContainer>
         <DarkOverlay />
         <Title variants={container} initial="hidden" animate="show">
           <div>
@@ -118,13 +118,11 @@ const Cover = () => {
             <motion.h1 variants={item} data-scroll data-scroll-delay="0.04" data-scroll-speed="4">i</motion.h1>
             <motion.h1 variants={item} data-scroll data-scroll-delay="0.02" data-scroll-speed="4">Q</motion.h1>
           </div>
-          <h2 data-scroll data-scroll-delay="0.02" data-scroll-speed="2">Movie Quick Search</h2>
+          <motion.h2 variants={item} data-scroll data-scroll-delay="0.02" data-scroll-speed="2">Movie Quick Search</motion.h2>
         </Title>
         <video src={cover} type="video/mp4" autoPlay muted loop />
       </VideoContainer>
-      <div>
-        helloohhhhhhhh
-      </div>
+      
     </div>
   );
 };

@@ -5,7 +5,7 @@ import {motion} from 'framer-motion';
 
 const Container = styled.div`
  position:absolute;
- top:1rem;
+ top:6rem;
  left:1rem;
 
  width:100%;
@@ -23,6 +23,8 @@ const Container = styled.div`
    overflow:visible;
    stroke-linejoin:round;
    stroke-linecap:round;
+   margin-right:1rem;
+   margin-top:-1rem;
 
    g{
        path{
@@ -35,7 +37,7 @@ const Container = styled.div`
  const Text=styled(motion.span)`
    font-size:${props=>props.theme.fontlg};
    color:${props=>props.theme.text};
-   padding-bottom:0.5rem;
+   padding-bottom:2rem;
  `;
 
  const textVariants={
