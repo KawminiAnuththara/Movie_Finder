@@ -14,7 +14,7 @@ const NavContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-   background: linear-gradient(135deg, black, purple);
+  
   transition: padding 0.3s ease; /* Smooth transition for padding */
 `;
 

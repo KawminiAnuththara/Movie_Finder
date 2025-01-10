@@ -82,6 +82,40 @@ const Logo = () => {
         <svg 
         xmlns="http://www.w3.org/2000/svg" 
         viewBox="0 0 24 24" 
+        width="68px" 
+        height="68px" 
+        fill="none"
+        > 
+          
+          <g>
+          <motion.path 
+           variants={pathVariants}
+           initial="hidden"
+           animate="visible"
+           d="M12 2.5l2.92 5.91 6.51.95-4.71 4.59 1.11 6.48L12 17.77l-5.83 3.06 1.11-6.48-4.71-4.59 6.51-.95L12 2.5z"/>
+          </g>
+          
+        </svg>
+        <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 24 24" 
+        width="58px" 
+        height="58px" 
+        fill="none"
+        > 
+          
+          <g>
+          <motion.path 
+           variants={pathVariants}
+           initial="hidden"
+           animate="visible"
+           d="M12 2.5l2.92 5.91 6.51.95-4.71 4.59 1.11 6.48L12 17.77l-5.83 3.06 1.11-6.48-4.71-4.59 6.51-.95L12 2.5z"/>
+          </g>
+          
+        </svg>
+        <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 24 24" 
         width="48px" 
         height="48px" 
         fill="none"
