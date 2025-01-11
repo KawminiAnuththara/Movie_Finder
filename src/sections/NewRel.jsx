@@ -158,7 +158,7 @@ const NewRel = () => {
   }, [images.length]);
 
   return (
-    <MainSection>
+    <MainSection id="new">
         <Title data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">Most Searched</Title>
         
         <Text data-scroll data-scroll-speed="-4">

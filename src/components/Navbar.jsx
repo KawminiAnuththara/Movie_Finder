@@ -15,7 +15,11 @@ const NavContainer = styled.div`
   justify-content: center;
   align-items: center;
   
-  transition: padding 0.3s ease; /* Smooth transition for padding */
+  transition: padding 0.3s ease;
+
+  @media (max-width:40em){
+    top:${props =>props.click ? '0' : `calc(-50vh - 4rem)`}
+  }
 `;
 
 // Styling for individual menu items

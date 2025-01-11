@@ -6,20 +6,17 @@ import Navbar from '../components/Navbar'
 
 
 const Section = styled.section`
-position: relative;
-min-height:100vh;
-overflow :hidden;
+ position: relative;
+ min-height:100vh;
+ overflow :hidden;
 `;
-
-
 
 const Home = () => {
   return (
-    <Section data-scroll-container>
+    <Section data-scroll-container id="home">
        <Navbar/>
-        <Cover/>
-        <Logo/>
-       
+       <Cover/>
+       <Logo/>
     </Section>
   )
 }

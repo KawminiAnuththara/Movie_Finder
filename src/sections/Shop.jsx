@@ -120,7 +120,7 @@ const Shop = () => {
   }, [width]);
 
   return (
-    <Section>
+    <Section id="shop">
       <Title data-scroll data-scroll-speed="-1">New Released</Title>
       <Left>
         <p>

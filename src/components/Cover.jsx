@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import LocomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
-import cover from '../assets/cover1.mp4';
+import cover from '../assets/bgcover.mp4';
 import {motion} from 'framer-motion';
 
 const VideoContainer = styled.section`
@@ -14,7 +14,15 @@ const VideoContainer = styled.section`
     width: 100%;
     height: 100vh;
     object-fit: cover;
+
+    @media(max-width:48em){
+       object-position:center 10%;
+    }
+    
   }
+    @media(max-width:30em){
+      object-position:center 50%;
+    }
 `;
 
 const DarkOverlay = styled.div`
@@ -49,14 +57,23 @@ const Title = styled(motion.div)`
     font-family: 'Bebas Neue';
     font-size: ${props => props.theme.fontBig};
     text-shadow: 1px 1px 1px ${props => props.theme.body};
-  }
 
+     @media(max-width:30em){
+      font-size:calc(5rem+8vw);
+    }
+  }
+  
   h2 {
     font-family: 'Oswald';
     font-size: ${props => props.theme.fontlg};
     text-shadow: 1px 1px 1px ${props => props.theme.body};
     font-weight: 300;
     text-transform: capitalize;
+
+      @media(max-width:30em){
+        font-size:${props =>props.theme.fontmd};
+        margin-top:-1.5rem;
+    }
   }
 `;
 
@@ -86,7 +103,6 @@ const item={
  
 }
 
-
 const Cover = () => {
   const scrollRef = useRef(null);
   const locomotiveInstance = useRef(null);
@@ -109,7 +125,7 @@ const Cover = () => {
   return (
     <div data-scroll-container ref={scrollRef}>
       <VideoContainer>
-        <DarkOverlay />
+        <DarkOverlay/>
         <Title variants={container} initial="hidden" animate="show">
           <div>
             <motion.h1 variants={item} data-scroll data-scroll-delay='0.13' data-scroll-speed="1">M</motion.h1>
@@ -122,7 +138,6 @@ const Cover = () => {
         </Title>
         <video src={cover} type="video/mp4" autoPlay muted loop />
       </VideoContainer>
-      
     </div>
   );
 };

@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import {motion} from 'framer-motion';
 import logo from '../assets/star_white-48dp.svg';
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
+import { easings } from '@react-spring/web';
 
 const Section = styled.section`
   min-height:100vh;
@@ -78,11 +80,25 @@ align-items:center;
 `
 
 const Footer = () => {
+
+    const {scroll} =useLocomotiveScroll();
+
+    const handleScroll = (id)=>{
+        let elem = document.querySelector(id);
+
+        scroll.scrollTo(elem,
+            {
+                offset:'-100',
+                duration:'2000',
+                easing:[0.25,0.0,0.35,1.0]
+            }
+        )
+    }
   return (
     <Section>
         <LogoContainer>
-            <img src={logo} alt=''/>
-            <h3>Movie Studio</h3>
+            <img src={logo} alt='' data-scroll data-scroll-speed="2"/>
+            <h3 data-scroll data-scroll-speed="-1">Movie Studio</h3>
         </LogoContainer>
         <FooterComponent
         initial={{y:"-400px"}}
@@ -93,10 +109,10 @@ const Footer = () => {
         }}
         >
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Category</li>
-                <li>New Released</li>
+                <li onClick={()=>handleScroll('#home')}>Home</li>
+                <li onClick={()=>handleScroll('.about')}>About</li>
+                <li onClick={()=>handleScroll('#shop')}>Category</li>
+                <li onClick={()=>handleScroll('#new')}>New Released</li>
                 <li>
                     <a href='http://google.com' target='_blank' rel="noreferrer">
                         Look Book
@@ -109,7 +125,9 @@ const Footer = () => {
                 </li>
             </ul>
             <Bottom>
-                <span>&copy; {new Date().getFullYear()}.All Right reserved</span>
+                <span 
+                 data-scroll data-scroll-speed="2" data-scroll-direction="horizontal"
+                >&copy; {new Date().getFullYear()}.All Right reserved</span>
             </Bottom>
         </FooterComponent>
     </Section>
