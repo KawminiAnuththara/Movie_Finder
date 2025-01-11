@@ -11,6 +11,9 @@ import Home from './sections/Home'
 import { AnimatePresence } from 'motion/react'
 import About from './sections/About'
 import Shop from './sections/Shop'
+import Banner from './sections/Banner'
+import NewRel from './sections/NewRel'
+import Footer from './sections/Footer'
 
 function App() {
   const containerRef = useRef(null)
@@ -34,11 +37,15 @@ function App() {
         }
         containerRef={containerRef}
         >
+        
       <AnimatePresence>
-      <main data-scroll-container ref={containerRef}>
+      <main className='App' data-scroll-container ref={containerRef}>
         <Home/>
         <About/>
         <Shop/>
+        <Banner/>
+        <NewRel/>
+        <Footer/>
       </main>
       </AnimatePresence>
       </LocomotiveScrollProvider>
