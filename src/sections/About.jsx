@@ -37,6 +37,7 @@ font-weight:300;
 position:relative;
 z-index:5;
 margin-top:20%;
+ text-align:center;
 `;
 
 const Right = styled.div`
